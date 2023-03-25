@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,700&family=Sono:wght@300;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+
+
+html{
+    // font-size: 70%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Sono', sans-serif;
+}
+
+
+
+.active-link{
+    background-color: #FC2947;;
+    color: #fff;
+}

@@ -1,0 +1,33 @@
+<section class="all-products">
+    <div class="container">
+        <div class="user-ui">
+            <h3>recommend for you</h3>
+            <div class="menu-item">
+                <a (click)="filter('')">all products</a>
+                <a (click)="filter('men')">men's clothing</a>
+                <a (click)="filter('women')">women's clothing</a>
+                <a (click)="filter('jewelery')">jewelery</a>
+                <a (click)="filter('electronics')">electronics</a>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="produc-dsp">
+                <ng-container *ngFor="let item of filterCategory">
+                    <div class="item">
+                        <img class="item-img" src="{{item.image}}" alt="">
+                        <div class="item-body">
+                            <h4 class="text-center">{{item.title}}</h4>
+                            <p class="fw-light">{{item.description}}</p>
+                        </div>
+                        <div class="action">
+                            <span class="fw-bold">{{item.price}}$</span>
+                            <i (click)="addToCart(item)" class='icon bx bx-cart-download'></i>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

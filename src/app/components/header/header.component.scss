@@ -1,0 +1,54 @@
+
+
+$main-color:#fdc827;
+$dark-color:#000;
+$box-shad:0 0.3rem 1rem rgba(0,0,0,0.1) ;
+
+
+.navbar{
+    position: relative;
+    top: 0; left: 0; right: 0;
+    align-items: center;
+    background-image: linear-gradient(90deg, #fdc827 70%, #FC2947);
+
+    .container{
+        .navbar-brand{
+            font-size: 2rem;
+            font-weight: bolder;
+            color: $dark-color;
+            letter-spacing: 1px;
+        }
+
+
+        .d-flex{
+            position: relative;
+
+            .total-cart{
+                position: absolute;
+                right: -15px;
+                bottom: -10px;
+                font-size: 1.5rem;
+                color: #fff;
+                font-weight: bolder;
+            }
+            .custom-btn{
+                cursor: pointer;
+                height: 45px;
+                width:45px;
+                font-size: 2rem;
+                border-radius: 50%;
+                text-align: center;
+                color: $dark-color;
+                background-color: $main-color;
+                
+                &:hover{
+                    box-shadow: $box-shad;
+                    color:#fff;
+                    background-color: #FC2947;
+                    transform: rotate(360deg);
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+<section class="product-card">
+    <div class="container">
+
+
+
+
+        <ng-container *ngIf="products.length != 0">
+            <div class="card-table shadow">
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>sr.no</th>
+                                <th>name</th>
+                                <th>image</th>
+                                <th>description</th>
+                                <th>price</th>
+                                <th>quantity</th>
+                                <th>total</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            <tr *ngFor="let item of products , let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{item.title}}</td>
+                                <td><img src="{{item.image}}" style="width: 100px;"></td>
+                                <td>{{item.description}}</td>
+                                <td>{{item.price}}</td>
+                                <td class="text-center">{{item.quantity}}</td>
+                                <td>{{item.total}}</td>
+                                <td><button (click)="removeProduct(item)" class="btn btn-danger"><i class='bx bx-trash fs-4'></i></button></td>
+                            </tr>
+                            <tr class="text-center">
+                                <td><button class="btn btn-outline-danger" (click)="removeAllProduct()">Del All</button></td>
+                                <td><button class="btn btn-warning text-white" routerLink="/home">shopping</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </ng-container>
+
+
+
+        <ng-container *ngIf="products.length == 0">
+            <div class="card text-center col-md-6 offset-md-3 mb-5">
+                <img src="../../../assets/empty-card.svg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3>Your Card Is Empty !</h3>
+                    <h6>Add Items Now </h6>
+                </div>
+                <div class="card-footer text-muted">
+                    <a href="#" routerLink="/home" class="btn">shop now</a>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</section>
+<app-footer></app-footer>
